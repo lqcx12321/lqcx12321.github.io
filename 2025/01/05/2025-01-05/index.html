@@ -29,16 +29,16 @@
 
   
   
-    <meta name="description" content="1.vrep 4.1 安装​	安装包附在文件夹中CoppeliaSim_Edu_V4_1_0_Setup.exe，安装中默认选项即可 ​	windows闪退bug解决！！！ ​	在vrep安装目录下的system文件夹找到usrset.txt，最末行处加入一行”allowOldEduRelease&#x3D;7501”即可(不需要双引号)。如下图示  2.本周工作总结ec66_com.lua​	v">
+    <meta name="description" content="vrep 4.1 安装​	安装包附在文件夹中CoppeliaSim_Edu_V4_1_0_Setup.exe，安装中默认选项即可 ​	windows闪退bug解决！！！ ​	在vrep安装目录下的system文件夹找到usrset.txt，最末行处加入一行”allowOldEduRelease&#x3D;7501”即可(不需要双引号)。如下图示  本周工作总结ec66_com.lua​	vrep里">
 <meta property="og:type" content="article">
 <meta property="og:title" content="20250105">
 <meta property="og:url" content="http://lqcx12321.github.io/2025/01/05/2025-01-05/index.html">
 <meta property="og:site_name" content="蓝桥春雪">
-<meta property="og:description" content="1.vrep 4.1 安装​	安装包附在文件夹中CoppeliaSim_Edu_V4_1_0_Setup.exe，安装中默认选项即可 ​	windows闪退bug解决！！！ ​	在vrep安装目录下的system文件夹找到usrset.txt，最末行处加入一行”allowOldEduRelease&#x3D;7501”即可(不需要双引号)。如下图示  2.本周工作总结ec66_com.lua​	v">
+<meta property="og:description" content="vrep 4.1 安装​	安装包附在文件夹中CoppeliaSim_Edu_V4_1_0_Setup.exe，安装中默认选项即可 ​	windows闪退bug解决！！！ ​	在vrep安装目录下的system文件夹找到usrset.txt，最末行处加入一行”allowOldEduRelease&#x3D;7501”即可(不需要双引号)。如下图示  本周工作总结ec66_com.lua​	vrep里">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://lqcx12321.github.io/picture/vrep4.1.png">
 <meta property="article:published_time" content="2025-01-05T03:02:17.000Z">
-<meta property="article:modified_time" content="2025-01-05T03:04:08.242Z">
+<meta property="article:modified_time" content="2025-01-05T03:11:12.000Z">
 <meta property="article:author" content="lqcx">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://lqcx12321.github.io/picture/vrep4.1.png">
@@ -208,16 +208,16 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <h1 id="1-vrep-4-1-安装"><a href="#1-vrep-4-1-安装" class="headerlink" title="1.vrep 4.1 安装"></a>1.vrep 4.1 安装</h1><p>​	安装包附在文件夹中CoppeliaSim_Edu_V4_1_0_Setup.exe，安装中默认选项即可</p>
+        <h1 id="vrep-4-1-安装"><a href="#vrep-4-1-安装" class="headerlink" title="vrep 4.1 安装"></a>vrep 4.1 安装</h1><p>​	安装包附在文件夹中CoppeliaSim_Edu_V4_1_0_Setup.exe，安装中默认选项即可</p>
 <p>​	<font color='red'>windows闪退bug解决！！！</font></p>
 <p>​	在vrep安装目录下的system文件夹找到usrset.txt，最末行处加入一行”allowOldEduRelease&#x3D;7501”即可(不需要双引号)。如下图示</p>
 <p><img src="/picture/vrep4.1.png" alt="vrep4.1"></p>
-<h1 id="2-本周工作总结"><a href="#2-本周工作总结" class="headerlink" title="2.本周工作总结"></a>2.本周工作总结</h1><h2 id="ec66-com-lua"><a href="#ec66-com-lua" class="headerlink" title="ec66_com.lua"></a>ec66_com.lua</h2><p>​	vrep里机械臂的非线程脚本，主要功能为控制机械臂依次到达三个位置，同时发布通信接口，为matlab通讯做准备</p>
+<h1 id="本周工作总结"><a href="#本周工作总结" class="headerlink" title="本周工作总结"></a>本周工作总结</h1><h2 id="ec66-com-lua"><a href="#ec66-com-lua" class="headerlink" title="ec66_com.lua"></a>ec66_com.lua</h2><p>​	vrep里机械臂的非线程脚本，主要功能为控制机械臂依次到达三个位置，同时发布通信接口，为matlab通讯做准备</p>
 <h2 id="control-EC66-m"><a href="#control-EC66-m" class="headerlink" title="control_EC66.m"></a>control_EC66.m</h2><p>​	matlab控制vrep的函数。</p>
 <p>​	vrep.simxSetJointTargetPosition为matlab控制vrep的主要函数。</p>
 <p>​	vrep.simxGetJointPosition为matlab从vrep中读取各个关节角度的主要函数</p>
 <h2 id="collision-ec66-m"><a href="#collision-ec66-m" class="headerlink" title="collision_ec66.m"></a>collision_ec66.m</h2><p>​	碰撞检测函数，robot.checkCollision为matlab的机器人工具箱内置的碰撞检测工具，会用上urdf导入的机械臂模型，检测整体是否有碰撞。</p>
-<h1 id="3-下周计划"><a href="#3-下周计划" class="headerlink" title="3.下周计划"></a>3.下周计划</h1><p>​	1.机械臂从一点到一点的运动轨迹，先考虑能不能走直线。rrt避障是计算得到多个点，也需要考虑从一点到一点的路径。后续也可以继续看可不可以做曲线。</p>
+<h1 id="下周工作计划"><a href="#下周工作计划" class="headerlink" title="下周工作计划"></a>下周工作计划</h1><p>​	1.机械臂从一点到一点的运动轨迹，先考虑能不能走直线。rrt避障是计算得到多个点，也需要考虑从一点到一点的路径。后续也可以继续看可不可以做曲线。</p>
 <p>​	2.matlab的碰撞检测函数的熟悉，正常检测碰撞并可视化。</p>
 <p>​	3.有空看看正逆运动学，这是基础。</p>
 
@@ -237,6 +237,22 @@
   </div>
   
   <nav id="article-nav" data-aos="fade-up">
+    
+      <div class="article-nav-link-wrap article-nav-link-left">
+        
+          
+          
+            <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="Hello World" class="lazyload">
+          
+        
+        <a href="/2026/05/30/hello-world/"></a>
+        <div class="article-nav-caption">前一篇</div>
+        <h3 class="article-nav-title">
+          
+            Hello World
+          
+        </h3>
+      </div>
     
     
     <div class="article-nav-link-wrap article-nav-link-right">
@@ -275,7 +291,7 @@
   <h3 class="toc-title">文章目录</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-vrep-4-1-%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">1.vrep 4.1 安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E6%9C%AC%E5%91%A8%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93"><span class="toc-number">2.</span> <span class="toc-text">2.本周工作总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ec66-com-lua"><span class="toc-number">2.1.</span> <span class="toc-text">ec66_com.lua</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#control-EC66-m"><span class="toc-number">2.2.</span> <span class="toc-text">control_EC66.m</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#collision-ec66-m"><span class="toc-number">2.3.</span> <span class="toc-text">collision_ec66.m</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E4%B8%8B%E5%91%A8%E8%AE%A1%E5%88%92"><span class="toc-number">3.</span> <span class="toc-text">3.下周计划</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vrep-4-1-%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">vrep 4.1 安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E5%91%A8%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93"><span class="toc-number">2.</span> <span class="toc-text">本周工作总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ec66-com-lua"><span class="toc-number">2.1.</span> <span class="toc-text">ec66_com.lua</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#control-EC66-m"><span class="toc-number">2.2.</span> <span class="toc-text">control_EC66.m</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#collision-ec66-m"><span class="toc-number">2.3.</span> <span class="toc-text">collision_ec66.m</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92"><span class="toc-number">3.</span> <span class="toc-text">下周工作计划</span></a></li></ol>
       
   </div>
 </div>
@@ -363,7 +379,7 @@
     
     <div>
       <span class="icon-copyright"></span>
-      2020-2025
+      2020-2026
       <span class="footer-info-sep rotate"></span>
       lqcx
     </div>
@@ -376,7 +392,7 @@
     
       <div>
         <span class="icon-brush"></span>
-        392
+        444
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
         00:03
@@ -411,7 +427,7 @@
   <h3 class="toc-title">文章目录</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-vrep-4-1-%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">1.vrep 4.1 安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E6%9C%AC%E5%91%A8%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93"><span class="toc-number">2.</span> <span class="toc-text">2.本周工作总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ec66-com-lua"><span class="toc-number">2.1.</span> <span class="toc-text">ec66_com.lua</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#control-EC66-m"><span class="toc-number">2.2.</span> <span class="toc-text">control_EC66.m</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#collision-ec66-m"><span class="toc-number">2.3.</span> <span class="toc-text">collision_ec66.m</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E4%B8%8B%E5%91%A8%E8%AE%A1%E5%88%92"><span class="toc-number">3.</span> <span class="toc-text">3.下周计划</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vrep-4-1-%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">vrep 4.1 安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E5%91%A8%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93"><span class="toc-number">2.</span> <span class="toc-text">本周工作总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ec66-com-lua"><span class="toc-number">2.1.</span> <span class="toc-text">ec66_com.lua</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#control-EC66-m"><span class="toc-number">2.2.</span> <span class="toc-text">control_EC66.m</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#collision-ec66-m"><span class="toc-number">2.3.</span> <span class="toc-text">collision_ec66.m</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92"><span class="toc-number">3.</span> <span class="toc-text">下周工作计划</span></a></li></ol>
       
   </div>
 </div>
